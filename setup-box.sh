@@ -6,3 +6,6 @@ wget --no-check-certificate \
   -O /home/vagrant/.ssh/authorized_keys
 chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant /home/vagrant/.ssh
+
+sudo sed -i /etc/ssh/sshd_config -e \
+    "/#Author*/ c AuthorizedKeysFile %h/.ssh/authorized_keys"
