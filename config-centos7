@@ -1,1 +1,46 @@
+#!/bin/sh
+# https://laredoute.io/blog/boxing-our-custom-centos-7-for-vagrant-to-manage-a-virtual-machine-environment-part-3/
+# CentOS 7 configuration 
 
+# You can start your configuration by setting SELinux to permissive mode (prints warnings instead of enforcing the security policy)
+sed -i -e 's/^SELINUX=.*/SELINUX=permissive/' /etc/selinux/config
+
+# Allow the vagrant user to use sudo without needing to provide a password
+echo "vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+# Create a .ssh folder, for your vagrant user, so that ssh keys and informations are stored there
+mkdir -m 0700 -p /home/vagrant/.ssh
+
+# You can set up the ssh public/private key provided by Vagrant, with the following command
+curl https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub >> /home/vagrant/.ssh/authorized_keys
+
+# Change permissions on authorized_keys file to be more restrictive
+chmod 600 /home/vagrant/.ssh/authorized_keys
+
+# Change ownership of the .ssh folder to your vagrant user and group
+chown -R vagrant:vagrant /home/vagrant/.ssh
+
+# Change the following settings for GRUB to make the boot faster
+# Don’t display any menu and boot immediately
+sed -i -e 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub
+
+# Set the default menu entry to 0 instead of saved (saved may not be available in all situations)
+sed -i -e 's/GRUB_DEFAULT=saved/GRUB_DEFAULT=0/' /etc/default/grub
+
+# Rebuild grub configuration file
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# Perform a system update using
+yum -y update
+
+# Clear the tmp folder
+rm -rf /tmp/*
+
+# Clean the system with
+yum clean all
+
+# Clean up history
+history -c
+
+# And you can finally shutdown the machine
+shutdown -h now
