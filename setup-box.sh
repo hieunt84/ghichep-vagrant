@@ -1,3 +1,4 @@
+#!/bin/sh
 mkdir -p /home/vagrant/.ssh
 chmod 0700 /home/vagrant/.ssh
 wget --no-check-certificate \
