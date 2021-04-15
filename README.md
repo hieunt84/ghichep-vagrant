@@ -3,3 +3,7 @@
 - [2. Vagrant Tutorial](https://learn.hashicorp.com/vagrant)
 - [3. Ansible Vagrant Examples](https://github.com/geerlingguy/ansible-vagrant-examples)
 - [4. Jenkins Vagrant Plugin ](https://plugins.jenkins.io/vagrant/)
+
+if Vagrant.has_plugin?("vagrant-vbguest")
+    config.vbguest.auto_update = false  
+  end
