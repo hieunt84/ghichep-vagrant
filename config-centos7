@@ -37,6 +37,7 @@ yum -y install epel-release
 
 # Installing Guest tools
 yum -y groupinstall "Development Tools"
+yum install -y gcc dkms build-essential kernel-devel
 
 # Perform a system update using
 yum -y update
