@@ -1,5 +1,7 @@
 #!/bin/sh
 # https://laredoute.io/blog/boxing-our-custom-centos-7-for-vagrant-to-manage-a-virtual-machine-environment-part-3/
+# https://medium.com/@gajbhiyedeepanshu/building-custom-vagrant-box-e6a846b6baca
+
 # CentOS 7 configuration 
 
 # You can start your configuration by setting SELinux to permissive mode (prints warnings instead of enforcing the security policy)
@@ -29,6 +31,12 @@ sed -i -e 's/GRUB_DEFAULT=saved/GRUB_DEFAULT=0/' /etc/default/grub
 
 # Rebuild grub configuration file
 grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# Install Epel Repo
+yum -y install epel-release
+
+# Installing Guest tools
+yum -y groupinstall "Development Tools"
 
 # Perform a system update using
 yum -y update
