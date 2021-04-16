@@ -3,6 +3,7 @@
 - [2. Vagrant Tutorial](https://learn.hashicorp.com/vagrant)
 - [3. Official docs](https://www.vagrantup.com/docs)
 - [4. Make base box](lab/make-box/make-box.md)
+- [5. Complete Vagrant Course 2020 ](https://www.youtube.com/watch?v=a6W1hF9CgDQ&list=PLnFWJCugpwfyInpbM1A435Lrd56jNwZTr)
 
 ## LAB
 - lab1
