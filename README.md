@@ -10,7 +10,7 @@
 - [Ansible Vagrant Examples](https://github.com/geerlingguy/ansible-vagrant-examples)
 - [ansible-role-wordpress](https://github.com/MakarenaLabs/ansible-role-wordpress/blob/master/Vagrantfile)
 - [Jenkins Vagrant Plugin ](https://plugins.jenkins.io/vagrant/)
-  + less less people use
+  + less people use
   + plugin not mantanined
 
 ## Lab
