@@ -12,5 +12,5 @@
 - [ansible-role-wordpress](https://github.com/MakarenaLabs/ansible-role-wordpress/blob/master/Vagrantfile)
 
 ## Lab
-- [lab1](labs/lab1/lab1.md)
-- [lab2](labs/lab2/lab2.md)
+- [lab1](lab/lab1/lab1.md)
+- [lab2](lab/lab2/lab2.md)
