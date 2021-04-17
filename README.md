@@ -6,7 +6,7 @@
 - [5. Vagrant Crash Course](https://www.youtube.com/watch?v=vBreXjkizgo)
 
 ## Lab
-- [lab1][labs/lab1/lab1.md]
+- [lab1](labs/lab1/lab1.md)
 - [lab2](labs/lab2/lab2.md)
 
 ## Advan
