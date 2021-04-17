@@ -6,8 +6,8 @@
 - [5. Vagrant Crash Course](https://www.youtube.com/watch?v=vBreXjkizgo)
 
 ## Lab
-- lab1[labs/lab1/]
-- lab2
+- [lab1][labs/lab1/lab1.md]
+- [lab2](labs/lab2/lab2.md)
 
 ## Advan
 - [Complete Vagrant Course 2020 ](https://www.youtube.com/watch?v=a6W1hF9CgDQ&list=PLnFWJCugpwfyInpbM1A435Lrd56jNwZTr)
