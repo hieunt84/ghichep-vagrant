@@ -12,6 +12,7 @@
 - [Jenkins Vagrant Plugin ](https://plugins.jenkins.io/vagrant/)
   + less people use
   + plugin not mantanined
+- [Shell Vagrant Examples](https://github.com/hieunt84/shell-vagrant-examples)
 
 ### Lab
 - [lab1](lab/lab1/lab1.md)
